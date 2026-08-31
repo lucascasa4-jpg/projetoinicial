@@ -1,4 +1,4 @@
-```javascript
+javascript 
 const campoPesquisa = document.getElementById("campoPesquisa");
 const botaoBuscar = document.getElementById("buscar");
 const resultados = document.getElementById("resultados");
@@ -211,4 +211,4 @@ function escapar(texto) {
         .replace(/'/g, "&#039;");
 
 }
-```
+
