@@ -1,4 +1,4 @@
-```javascript
+javascript
 // =====================================
 // ELEMENTOS
 // =====================================
@@ -479,4 +479,4 @@ function mostrarAviso(texto) {
         );
 
 }
-```
+
