@@ -1,16 +1,124 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+
+    <title>Busca Fácil</title>
+
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-    <h1>🚀 MEU SITE FUNCIONOU!</h1>
+    <header class="topo">
 
-    <p>Meu GitHub Pages está funcionando.</p>
+        <div class="logo">
+            🔎 <span>Busca Fácil</span>
+        </div>
+
+        <button id="tema" class="botao-tema">
+            🌙
+        </button>
+
+    </header>
+
+
+    <main class="principal">
+
+        <section class="inicio">
+
+            <div class="logo-grande">
+                🔎
+            </div>
+
+            <h1>O que você está procurando?</h1>
+
+            <p class="subtitulo">
+                Pesquise na internet de forma rápida e simples.
+            </p>
+
+
+            <div class="barra-pesquisa">
+
+                <span class="icone-pesquisa">🔍</span>
+
+                <input
+                    type="text"
+                    id="campoPesquisa"
+                    placeholder="Digite sua pesquisa..."
+                    autocomplete="off"
+                >
+
+                <button id="voz" title="Pesquisa por voz">
+                    🎤
+                </button>
+
+                <button id="buscar" class="botao-buscar">
+                    Buscar
+                </button>
+
+            </div>
+
+
+            <div class="sugestoes">
+
+                <button onclick="pesquisarSugestao('Tecnologia')">
+                    💻 Tecnologia
+                </button>
+
+                <button onclick="pesquisarSugestao('Notícias')">
+                    📰 Notícias
+                </button>
+
+                <button onclick="pesquisarSugestao('Esportes')">
+                    ⚽ Esportes
+                </button>
+
+                <button onclick="pesquisarSugestao('Filmes')">
+                    🎬 Filmes
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="resultados" class="resultados">
+
+            <div class="resultado-inicial">
+
+                <div class="resultado-icone">
+                    ✨
+                </div>
+
+                <h2>Comece uma pesquisa</h2>
+
+                <p>
+                    Digite algo na caixa acima para encontrar resultados.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Busca Fácil © 2026
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
+```
