@@ -49,21 +49,19 @@ MENU MOBILE
 
 menuButton.addEventListener("click", () => {
 
-```
 navMenu.classList.toggle("active");
-```
 
 });
 
 document.querySelectorAll(".nav a").forEach(link => {
 
-```
+
 link.addEventListener("click", () => {
 
     navMenu.classList.remove("active");
 
 });
-```
+
 
 });
 
@@ -76,17 +74,17 @@ localStorage.getItem("palavraVivaTheme");
 
 if (savedTheme === "dark") {
 
-```
+
 document.body.classList.add("dark");
 
 themeButton.textContent = "☀️";
-```
+
 
 }
 
 themeButton.addEventListener("click", () => {
 
-```
+
 document.body.classList.toggle("dark");
 
 const dark =
@@ -112,7 +110,7 @@ if (dark) {
     );
 
 }
-```
+
 
 });
 
@@ -125,15 +123,14 @@ localStorage.getItem("palavraVivaFavorite");
 
 if (savedFavorite === "true") {
 
-```
+
 favoriteIcon.textContent = "♥";
-```
 
 }
 
 favoriteButton.addEventListener("click", () => {
 
-```
+
 const isFavorite =
     favoriteIcon.textContent === "♥";
 
@@ -161,7 +158,7 @@ if (isFavorite) {
     showToast("Versículo favoritado ❤️");
 
 }
-```
+
 
 });
 
@@ -171,7 +168,7 @@ COPIAR VERSÍCULO
 
 copyVerse.addEventListener("click", async () => {
 
-```
+
 const text =
     `"${verseText}"\n\n${verseReference}\n\nPalavra Viva`;
 
@@ -187,7 +184,7 @@ try {
     showToast("Não foi possível copiar.");
 
 }
-```
+
 
 });
 
@@ -197,7 +194,7 @@ COMPARTILHAR
 
 shareVerse.addEventListener("click", async () => {
 
-```
+
 const text =
     `"${verseText}" — ${verseReference}`;
 
@@ -239,7 +236,7 @@ if (navigator.share) {
     }
 
 }
-```
+
 
 });
 
@@ -249,7 +246,7 @@ LEITOR DE VOZ
 
 function falar(texto, button) {
 
-```
+
 if (!("speechSynthesis" in window)) {
 
     showToast(
@@ -286,29 +283,28 @@ fala.onend = () => {
 
 
 window.speechSynthesis.speak(fala);
-```
+
 
 }
 
 listenVerse.addEventListener("click", () => {
 
-```
+
 falar(
     `${verseText}. ${verseReference}`,
     listenVerse
 );
-```
+
 
 });
 
 listenPrayer.addEventListener("click", () => {
 
-```
 const prayer =
     document.getElementById("prayerText").innerText;
 
 falar(prayer, listenPrayer);
-```
+
 
 });
 
@@ -318,12 +314,12 @@ PESQUISA
 
 const mensagens = [
 
-```
+
 {
     palavra: "fé",
 
     titulo: "Tenha fé",
-
+    
     texto:
         "A fé nos ajuda a continuar caminhando mesmo quando não conseguimos enxergar o caminho."
 },
@@ -381,13 +377,13 @@ const mensagens = [
     texto:
         "Em Jesus encontramos esperança, amor, perdão e uma nova oportunidade."
 }
-```
+
 
 ];
 
 searchForm.addEventListener("submit", event => {
 
-```
+
 event.preventDefault();
 
 
@@ -453,7 +449,7 @@ searchResult.innerHTML =
         </div>
 
     `).join("");
-```
+
 
 });
 
@@ -465,7 +461,6 @@ let toastTimer;
 
 function showToast(message) {
 
-```
 toast.textContent = message;
 
 toast.classList.add("show");
@@ -480,7 +475,7 @@ toastTimer =
         toast.classList.remove("show");
 
     }, 2500);
-```
+
 
 }
 
@@ -490,7 +485,6 @@ FECHAR MENU AO CLICAR FORA
 
 document.addEventListener("click", event => {
 
-```
 if (
     !navMenu.contains(event.target) &&
     !menuButton.contains(event.target)
@@ -499,7 +493,7 @@ if (
     navMenu.classList.remove("active");
 
 }
-```
+
 
 });
 
@@ -509,7 +503,7 @@ EFEITO DO HEADER AO ROLAR
 
 window.addEventListener("scroll", () => {
 
-```
+
 if (window.scrollY > 50) {
 
     document.querySelector(".header").style.boxShadow =
@@ -521,6 +515,6 @@ if (window.scrollY > 50) {
         "none";
 
 }
-```
+
 
 });
