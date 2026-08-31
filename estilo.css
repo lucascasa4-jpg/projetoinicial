@@ -1,0 +1,390 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #172033;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.botao-tema {
+    border: none;
+    background: #f1f5f9;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   PRINCIPAL
+========================= */
+
+.principal {
+    min-height: calc(100vh - 130px);
+}
+
+
+/* =========================
+   INÍCIO
+========================= */
+
+.inicio {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 100px 20px 50px;
+
+    text-align: center;
+}
+
+.logo-grande {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+}
+
+.inicio h1 {
+    font-size: 42px;
+
+    margin: 10px 0;
+}
+
+.subtitulo {
+    font-size: 18px;
+
+    color: #64748b;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    height: 62px;
+
+    background: white;
+
+    border: 1px solid #dbe1ea;
+
+    border-radius: 18px;
+
+    padding: 7px 8px 7px 20px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    transition: 0.2s;
+}
+
+.barra-pesquisa:focus-within {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 8px 30px rgba(37,99,235,0.15);
+}
+
+.icone-pesquisa {
+    font-size: 21px;
+
+    margin-right: 12px;
+}
+
+.barra-pesquisa input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 18px;
+
+    color: #172033;
+
+    background: transparent;
+}
+
+.barra-pesquisa button {
+    border: none;
+
+    cursor: pointer;
+}
+
+#voz {
+    background: transparent;
+
+    font-size: 20px;
+
+    padding: 12px;
+}
+
+.botao-buscar {
+    height: 48px;
+
+    padding: 0 24px;
+
+    border-radius: 13px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.botao-buscar:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   SUGESTÕES
+========================= */
+
+.sugestoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+.sugestoes button {
+    border: 1px solid #dbe1ea;
+
+    background: white;
+
+    color: #334155;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.sugestoes button:hover {
+    border-color: #2563eb;
+
+    color: #2563eb;
+}
+
+
+/* =========================
+   RESULTADOS
+========================= */
+
+.resultados {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 20px;
+}
+
+.resultado-inicial {
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 45px 20px;
+
+    color: #64748b;
+}
+
+.resultado-icone {
+    font-size: 45px;
+}
+
+.resultado {
+    background: white;
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.2s;
+}
+
+.resultado:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.resultado h3 {
+    margin-top: 0;
+
+    color: #2563eb;
+}
+
+.resultado p {
+    color: #475569;
+
+    line-height: 1.6;
+}
+
+.resultado small {
+    color: #16a34a;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #64748b;
+
+    border-top: 1px solid #e5e7eb;
+
+    background: white;
+}
+
+
+/* =========================
+   TEMA ESCURO
+========================= */
+
+body.escuro {
+    background: #0f172a;
+
+    color: #f8fafc;
+}
+
+body.escuro .topo,
+body.escuro .barra-pesquisa,
+body.escuro .resultado,
+body.escuro .resultado-inicial,
+body.escuro .sugestoes button,
+body.escuro footer {
+    background: #1e293b;
+
+    color: #f8fafc;
+
+    border-color: #334155;
+}
+
+body.escuro .subtitulo,
+body.escuro .resultado p,
+body.escuro footer {
+    color: #94a3b8;
+}
+
+body.escuro .barra-pesquisa input {
+    color: white;
+}
+
+body.escuro .botao-tema {
+    background: #334155;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .topo {
+        padding: 0 15px;
+    }
+
+    .inicio {
+        padding-top: 60px;
+    }
+
+    .inicio h1 {
+        font-size: 30px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+    .barra-pesquisa {
+        height: auto;
+
+        padding: 8px;
+
+        flex-wrap: wrap;
+    }
+
+    .barra-pesquisa input {
+        height: 45px;
+    }
+
+    .botao-buscar {
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+    #voz {
+        display: none;
+    }
+
+}
+```
