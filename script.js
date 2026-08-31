@@ -1,29 +1,372 @@
-javascript 
-const campoPesquisa = document.getElementById("campoPesquisa");
-const botaoBuscar = document.getElementById("buscar");
-const resultados = document.getElementById("resultados");
-const botaoTema = document.getElementById("tema");
-const botaoVoz = document.getElementById("voz");
+```javascript
+// =====================================
+// ELEMENTOS
+// =====================================
+
+const textoVersiculo =
+    document.getElementById("textoVersiculo");
+
+const referencia =
+    document.getElementById("referencia");
+
+const botaoOuvir =
+    document.getElementById("ouvir");
+
+const botaoFavoritar =
+    document.getElementById("favoritar");
+
+const botaoCopiar =
+    document.getElementById("copiar");
+
+const botaoCompartilhar =
+    document.getElementById("compartilhar");
+
+const botaoTema =
+    document.getElementById("botaoTema");
+
+const textoOracao =
+    document.getElementById("textoOracao");
+
+const botaoOuvirOracao =
+    document.getElementById("ouvirOracao");
+
+const campoPesquisa =
+    document.getElementById("campoPesquisa");
+
+const botaoPesquisa =
+    document.getElementById("botaoPesquisa");
+
+const resultadoPesquisa =
+    document.getElementById("resultadoPesquisa");
+
+const aviso =
+    document.getElementById("aviso");
 
 
-// ================================
-// FAZER PESQUISA
-// ================================
+// =====================================
+// VERSÍCULO
+// =====================================
 
-function fazerPesquisa() {
+const versiculoTexto =
+    "O Senhor é o meu pastor; nada me faltará.";
 
-    const termo = campoPesquisa.value.trim();
+const versiculoReferencia =
+    "Salmos 23:1";
+
+
+// =====================================
+// LEITURA POR VOZ
+// =====================================
+
+function falar(texto) {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "Seu navegador não suporta leitura por voz."
+        );
+
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const voz =
+        new SpeechSynthesisUtterance(texto);
+
+    voz.lang = "pt-BR";
+
+    voz.rate = 0.85;
+
+    voz.pitch = 1;
+
+    speechSynthesis.speak(voz);
+}
+
+
+// =====================================
+// OUVIR VERSÍCULO
+// =====================================
+
+botaoOuvir.addEventListener(
+    "click",
+    function() {
+
+        falar(
+            versiculoTexto +
+            ". " +
+            versiculoReferencia
+        );
+
+    }
+);
+
+
+// =====================================
+// OUVIR ORAÇÃO
+// =====================================
+
+botaoOuvirOracao.addEventListener(
+    "click",
+    function() {
+
+        falar(textoOracao.textContent);
+
+    }
+);
+
+
+// =====================================
+// FAVORITO
+// =====================================
+
+let favorito =
+    localStorage.getItem("versiculoFavorito") === "true";
+
+
+function atualizarFavorito() {
+
+    if (favorito) {
+
+        botaoFavoritar.textContent =
+            "❤️ Favoritado";
+
+        botaoFavoritar.classList.add(
+            "favoritado"
+        );
+
+    } else {
+
+        botaoFavoritar.textContent =
+            "🤍 Favoritar";
+
+        botaoFavoritar.classList.remove(
+            "favoritado"
+        );
+
+    }
+}
+
+
+atualizarFavorito();
+
+
+botaoFavoritar.addEventListener(
+    "click",
+    function() {
+
+        favorito = !favorito;
+
+        localStorage.setItem(
+            "versiculoFavorito",
+            favorito
+        );
+
+        atualizarFavorito();
+
+    }
+);
+
+
+// =====================================
+// COPIAR
+// =====================================
+
+botaoCopiar.addEventListener(
+    "click",
+    async function() {
+
+        const texto =
+            `"${versiculoTexto}"\n\n` +
+            versiculoReferencia;
+
+        try {
+
+            await navigator.clipboard.writeText(
+                texto
+            );
+
+            mostrarAviso(
+                "📋 Versículo copiado!"
+            );
+
+        } catch {
+
+            mostrarAviso(
+                "Não foi possível copiar."
+            );
+
+        }
+
+    }
+);
+
+
+// =====================================
+// COMPARTILHAR
+// =====================================
+
+botaoCompartilhar.addEventListener(
+    "click",
+    async function() {
+
+        const texto =
+            `"${versiculoTexto}" - ` +
+            versiculoReferencia +
+            "\n\n" +
+            "📖 Palavra Viva";
+
+        if (navigator.share) {
+
+            try {
+
+                await navigator.share({
+                    title: "Versículo do Dia",
+                    text: texto
+                });
+
+            } catch {
+
+                // Usuário cancelou o compartilhamento
+
+            }
+
+        } else {
+
+            try {
+
+                await navigator.clipboard.writeText(
+                    texto
+                );
+
+                mostrarAviso(
+                    "📤 Texto copiado para compartilhar!"
+                );
+
+            } catch {
+
+                mostrarAviso(
+                    "Não foi possível compartilhar."
+                );
+
+            }
+
+        }
+
+    }
+);
+
+
+// =====================================
+// TEMA
+// =====================================
+
+const temaSalvo =
+    localStorage.getItem("temaEscuro");
+
+
+if (temaSalvo === "true") {
+
+    document.body.classList.add("escuro");
+
+    botaoTema.textContent = "☀️";
+
+}
+
+
+botaoTema.addEventListener(
+    "click",
+    function() {
+
+        document.body.classList.toggle(
+            "escuro"
+        );
+
+        const escuro =
+            document.body.classList.contains(
+                "escuro"
+            );
+
+        localStorage.setItem(
+            "temaEscuro",
+            escuro
+        );
+
+        botaoTema.textContent =
+            escuro ? "☀️" : "🌙";
+
+    }
+);
+
+
+// =====================================
+// PESQUISA BÍBLICA
+// =====================================
+
+const versiculos = [
+
+    {
+        referencia: "Salmos 23:1",
+        texto:
+            "O Senhor é o meu pastor; nada me faltará."
+    },
+
+    {
+        referencia: "João 3:16",
+        texto:
+            "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
+    },
+
+    {
+        referencia: "Filipenses 4:13",
+        texto:
+            "Posso todas as coisas naquele que me fortalece."
+    },
+
+    {
+        referencia: "Jeremias 29:11",
+        texto:
+            "Porque eu bem sei os pensamentos que penso de vós, diz o Senhor; pensamentos de paz e não de mal, para vos dar o fim que esperais."
+    },
+
+    {
+        referencia: "Isaías 41:10",
+        texto:
+            "Não temas, porque eu sou contigo; não te assombres, porque eu sou teu Deus."
+    },
+
+    {
+        referencia: "Salmos 46:1",
+        texto:
+            "Deus é o nosso refúgio e fortaleza, socorro bem presente na angústia."
+    },
+
+    {
+        referencia: "Provérbios 3:5",
+        texto:
+            "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento."
+    }
+
+];
+
+
+function pesquisarBiblia() {
+
+    const termo =
+        campoPesquisa.value
+            .trim()
+            .toLowerCase();
+
 
     if (termo === "") {
 
-        resultados.innerHTML = `
-            <div class="resultado-inicial">
-                <div class="resultado-icone">⚠️</div>
-
-                <h2>Digite alguma coisa</h2>
-
+        resultadoPesquisa.innerHTML = `
+            <div class="resultado-item">
+                <strong>🔎 Pesquise um tema</strong>
                 <p>
-                    Escreva o que você deseja pesquisar.
+                    Digite uma palavra como
+                    <b>fé</b>, <b>amor</b>,
+                    <b>Deus</b> ou <b>esperança</b>.
                 </p>
             </div>
         `;
@@ -32,110 +375,75 @@ function fazerPesquisa() {
     }
 
 
-    const pesquisaGoogle =
-        "https://www.google.com/search?q=" +
-        encodeURIComponent(termo);
+    const resultados =
+        versiculos.filter(item =>
+            item.texto
+                .toLowerCase()
+                .includes(termo)
+            ||
+            item.referencia
+                .toLowerCase()
+                .includes(termo)
+        );
 
 
-    resultados.innerHTML = `
+    if (resultados.length === 0) {
 
-        <div class="resultado">
+        resultadoPesquisa.innerHTML = `
+            <div class="resultado-item">
+                <strong>😔 Nenhum resultado encontrado</strong>
+                <p>
+                    Tente outra palavra.
+                </p>
+            </div>
+        `;
 
-            <small>Pesquisa</small>
-
-            <h3>🔎 ${escapar(termo)}</h3>
-
-            <p>
-                Você pesquisou por
-                <strong>${escapar(termo)}</strong>.
-            </p>
-
-            <a
-                href="${pesquisaGoogle}"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Ver resultados na web →
-            </a>
-
-        </div>
+        return;
+    }
 
 
-        <div class="resultado">
+    resultadoPesquisa.innerHTML =
+        resultados.map(item => `
 
-            <h3>💡 Dica</h3>
+            <div class="resultado-item">
 
-            <p>
-                Você pode pesquisar por notícias,
-                tecnologia, esportes, filmes, músicas
-                e muito mais.
-            </p>
+                <strong>
+                    📖 ${item.referencia}
+                </strong>
 
-        </div>
+                <p>
+                    "${item.texto}"
+                </p>
 
-    `;
+                <button
+                    onclick='falar(${JSON.stringify(
+                        item.texto
+                    )})'
+                    class="botao-oracao"
+                >
+                    🔊 Ouvir
+                </button>
+
+            </div>
+
+        `).join("");
 
 }
 
 
-// ================================
-// BOTÃO PESQUISAR
-// ================================
-
-botaoBuscar.addEventListener(
+botaoPesquisa.addEventListener(
     "click",
-    fazerPesquisa
+    pesquisarBiblia
 );
 
-
-// ================================
-// ENTER
-// ================================
 
 campoPesquisa.addEventListener(
     "keydown",
     function(event) {
 
         if (event.key === "Enter") {
-            fazerPesquisa();
-        }
 
-    }
-);
-
-
-// ================================
-// SUGESTÕES
-// ================================
-
-function pesquisarSugestao(termo) {
-
-    campoPesquisa.value = termo;
-
-    fazerPesquisa();
-
-}
-
-
-// ================================
-// TEMA
-// ================================
-
-botaoTema.addEventListener(
-    "click",
-    function() {
-
-        document.body.classList.toggle("escuro");
-
-        if (
-            document.body.classList.contains("escuro")
-        ) {
-
-            botaoTema.textContent = "☀️";
-
-        } else {
-
-            botaoTema.textContent = "🌙";
+            pesquisarBiblia();
 
         }
 
@@ -143,72 +451,32 @@ botaoTema.addEventListener(
 );
 
 
-// ================================
-// PESQUISA POR VOZ
-// ================================
+// =====================================
+// AVISO
+// =====================================
 
-if ("webkitSpeechRecognition" in window) {
-
-    const reconhecimento =
-        new webkitSpeechRecognition();
-
-    reconhecimento.lang = "pt-BR";
-
-    reconhecimento.continuous = false;
-
-    reconhecimento.interimResults = false;
+let avisoTimeout;
 
 
-    botaoVoz.addEventListener(
-        "click",
-        function() {
+function mostrarAviso(texto) {
 
-            reconhecimento.start();
+    aviso.textContent = texto;
 
-        }
-    );
+    aviso.classList.add("mostrar");
 
+    clearTimeout(avisoTimeout);
 
-    reconhecimento.onresult =
-        function(event) {
+    avisoTimeout =
+        setTimeout(
+            function() {
 
-            const texto =
-                event.results[0][0].transcript;
+                aviso.classList.remove(
+                    "mostrar"
+                );
 
-            campoPesquisa.value = texto;
-
-            fazerPesquisa();
-
-        };
-
-} else {
-
-    botaoVoz.addEventListener(
-        "click",
-        function() {
-
-            alert(
-                "A pesquisa por voz não é suportada neste navegador."
-            );
-
-        }
-    );
+            },
+            2500
+        );
 
 }
-
-
-// ================================
-// SEGURANÇA
-// ================================
-
-function escapar(texto) {
-
-    return String(texto)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-
-}
-
+```
