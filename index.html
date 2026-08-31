@@ -1,429 +1,637 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+```
+<meta charset="UTF-8">
 
-<meta name="description" content="Palavra Viva — inspiração, oração, reflexão e mensagens de fé para todos os dias.">
-<meta name="theme-color" content="#8b5e34">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Palavra Viva — Bíblia, fé, oração, reflexão e mensagens para o seu dia."
+>
+
+<meta
+    name="theme-color"
+    content="#a87916"
+>
 
 <title>Palavra Viva | Bíblia & Fé</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+<link
+    rel="stylesheet"
+    href="estilo.css"
+>
+```
 
 </head>
 
 <body>
 
+<!-- ==================================================
+     TOPO
+================================================== -->
 
-<!-- ================= HEADER ================= -->
+<header class="topo">
 
-<header class="header" id="inicio">
+```
+<a
+    href="#inicio"
+    class="logo"
+>
 
-    <div class="container nav-container">
+    <div class="logo-icone">
+        ✝️
+    </div>
 
-        <a href="#inicio" class="logo">
-            <span class="logo-icon">✝</span>
+    <div>
 
-            <span>
-                <strong>Palavra Viva</strong>
-                <small>Bíblia & Fé</small>
-            </span>
-        </a>
+        <strong>
+            Palavra Viva
+        </strong>
 
-        <nav class="nav" id="navMenu">
-            <a href="#inicio">Início</a>
-            <a href="#versiculo">Versículo</a>
-            <a href="#oracao">Oração</a>
-            <a href="#reflexao">Reflexão</a>
-            <a href="#pesquisa">Pesquisar</a>
-        </nav>
-
-        <div class="nav-actions">
-
-            <button class="icon-button" id="themeButton" title="Alterar tema">
-                🌙
-            </button>
-
-            <button class="menu-button" id="menuButton" aria-label="Abrir menu">
-                ☰
-            </button>
-
-        </div>
+        <span>
+            Bíblia & Fé
+        </span>
 
     </div>
+
+</a>
+
+
+<nav>
+
+    <a href="#inicio">
+        Início
+    </a>
+
+    <a href="#versiculo">
+        Versículo
+    </a>
+
+    <a href="#oracao">
+        Oração
+    </a>
+
+    <a href="#reflexao">
+        Reflexão
+    </a>
+
+    <a href="#pesquisa">
+        Pesquisar
+    </a>
+
+</nav>
+
+
+<button
+    class="tema"
+    id="botaoTema"
+    aria-label="Alterar tema"
+>
+    🌙
+</button>
+```
 
 </header>
 
+<!-- ==================================================
+     CONTEÚDO PRINCIPAL
+================================================== -->
 
 <main>
 
-    <!-- ================= HERO ================= -->
+<!-- ==================================================
+     HERO
+================================================== -->
 
-    <section class="hero">
+<section
+    class="hero"
+    id="inicio"
+>
 
-        <div class="hero-overlay"></div>
+```
+<div class="hero-conteudo">
 
-        <div class="container hero-content">
 
-            <span class="eyebrow">
-                ✨ UMA PALAVRA PARA SEU DIA
-            </span>
+    <span class="etiqueta">
 
-            <h1>
-                Fortaleça sua fé<br>
-                <span>todos os dias.</span>
-            </h1>
+        ✨ UMA PALAVRA PARA SEU DIA
 
-            <p>
-                Encontre inspiração, esperança e uma mensagem
-                de fé para começar ou terminar o seu dia.
-            </p>
+    </span>
 
-            <div class="hero-buttons">
 
-                <a href="#versiculo" class="button primary">
-                    📖 Ler versículo
-                </a>
+    <h1>
 
-                <a href="#oracao" class="button secondary">
-                    🙏 Fazer oração
-                </a>
+        Fortaleça sua fé
+        <br>
 
-            </div>
+        todos os dias.
 
-        </div>
+    </h1>
 
-        <div class="scroll-indicator">
-            <span>↓</span>
-        </div>
 
-    </section>
+    <p>
 
+        Encontre inspiração, esperança e uma
+        mensagem de fé para começar ou terminar
+        o seu dia.
 
-    <!-- ================= VERSÍCULO ================= -->
+    </p>
 
-    <section class="section verse-section" id="versiculo">
 
-        <div class="container">
+    <div class="hero-botoes">
 
-            <div class="section-heading">
 
-                <span class="section-label">
-                    ✝ PALAVRA DE HOJE
-                </span>
+        <a
+            href="#versiculo"
+            class="botao-principal"
+        >
 
-                <h2>Versículo do Dia</h2>
+            📖 Ler versículo
 
-                <p>
-                    Uma palavra para alimentar sua fé.
-                </p>
+        </a>
 
-            </div>
 
+        <a
+            href="#oracao"
+            class="botao-secundario"
+        >
 
-            <article class="verse-card">
+            🙏 Fazer oração
 
-                <div class="verse-decoration">“</div>
+        </a>
 
-                <div class="verse-content">
 
-                    <p class="verse-text" id="verseText">
-                        O Senhor é o meu pastor; nada me faltará.
-                    </p>
+    </div>
 
-                    <strong class="verse-reference" id="verseReference">
-                        Salmos 23:1
-                    </strong>
 
-                </div>
+</div>
 
-                <div class="verse-actions">
 
-                    <button class="action-button" id="listenVerse">
-                        <span>🔊</span>
-                        <small>Ouvir</small>
-                    </button>
+<div class="cruz-decoracao">
 
-                    <button class="action-button" id="favoriteButton">
-                        <span id="favoriteIcon">♡</span>
-                        <small>Favoritar</small>
-                    </button>
+    ✝
 
-                    <button class="action-button" id="copyVerse">
-                        <span>📋</span>
-                        <small>Copiar</small>
-                    </button>
+</div>
+```
 
-                    <button class="action-button" id="shareVerse">
-                        <span>📤</span>
-                        <small>Compartilhar</small>
-                    </button>
+</section>
 
-                </div>
+<!-- ==================================================
+     VERSÍCULO
+================================================== -->
 
-            </article>
+<section
+    class="secao"
+    id="versiculo"
+>
 
-        </div>
+```
+<div class="titulo-secao">
 
-    </section>
+    <span>
+        ✝
+    </span>
 
+    <div>
 
-    <!-- ================= ORAÇÃO ================= -->
+        <small>
+            PALAVRA DE HOJE
+        </small>
 
-    <section class="section prayer-section" id="oracao">
+        <h2>
+            Versículo do Dia
+        </h2>
 
-        <div class="container">
+    </div>
 
-            <div class="two-column">
+</div>
 
-                <article class="prayer-card">
 
-                    <div class="card-icon">
-                        🙏
-                    </div>
+<div class="versiculo-card">
 
-                    <span class="section-label">
-                        MOMENTO DE FÉ
-                    </span>
 
-                    <h2>Oração do Dia</h2>
+    <div class="aspas">
+        “
+    </div>
 
-                    <div class="prayer-text" id="prayerText">
 
-                        <p>
-                            Senhor meu Deus, obrigado por mais
-                            um dia de vida.
-                        </p>
+    <p id="textoVersiculo">
 
-                        <p>
-                            Fortalece minha fé, guia meus passos
-                            e enche meu coração de paz.
-                        </p>
+        O Senhor é o meu pastor;
+        nada me faltará.
 
-                        <p>
-                            Ajuda-me a confiar em Ti mesmo
-                            diante das dificuldades.
-                        </p>
+    </p>
 
-                        <p>
-                            Que a Tua presença esteja comigo
-                            hoje e sempre.
-                        </p>
 
-                        <p>
-                            Em nome de Jesus, amém.
-                        </p>
+    <strong id="referenciaVersiculo">
 
-                    </div>
+        Salmos 23:1
 
-                    <button class="outline-button" id="listenPrayer">
-                        🔊 Ouvir oração
-                    </button>
+    </strong>
 
-                </article>
 
+    <div class="acoes">
 
-                <!-- ================= REFLEXÃO ================= -->
 
-                <article class="reflection-card" id="reflexao">
+        <button
+            id="ouvirVersiculo"
+            type="button"
+        >
 
-                    <div class="reflection-top">
+            🔊 Ouvir
 
-                        <div class="card-icon">
-                            💡
-                        </div>
+        </button>
 
-                        <span class="section-label">
-                            PARA PENSAR
-                        </span>
 
-                    </div>
+        <button
+            id="favoritar"
+            type="button"
+        >
 
-                    <h2>
-                        Deus continua<br>
-                        cuidando de você.
-                    </h2>
+            ♡ Favoritar
 
-                    <div class="reflection-text">
+        </button>
 
-                        <p>
-                            Existem dias em que não conseguimos
-                            entender o que está acontecendo.
-                            Mesmo assim, podemos continuar
-                            confiando em Deus.
-                        </p>
 
-                        <p>
-                            A fé não significa que não teremos
-                            dificuldades. Significa que não
-                            precisamos enfrentá-las sozinhos.
-                        </p>
+        <button
+            id="copiar"
+            type="button"
+        >
 
-                        <p>
-                            Entregue suas preocupações a Deus
-                            e continue caminhando. O que hoje
-                            parece impossível pode se transformar
-                            em um testemunho amanhã.
-                        </p>
+            📋 Copiar
 
-                    </div>
+        </button>
 
-                    <div class="reflection-footer">
-                        <span>🕊️</span>
-                        <span>Continue confiando.</span>
-                    </div>
 
-                </article>
+        <button
+            id="compartilhar"
+            type="button"
+        >
 
-            </div>
+            📤 Compartilhar
 
-        </div>
+        </button>
 
-    </section>
 
+    </div>
 
-    <!-- ================= PESQUISA ================= -->
 
-    <section class="section search-section" id="pesquisa">
+</div>
+```
 
-        <div class="container">
+</section>
 
-            <div class="search-box">
+<!-- ==================================================
+     ORAÇÃO
+================================================== -->
 
-                <div class="search-icon">
-                    🔎
-                </div>
+<section
+    class="secao"
+    id="oracao"
+>
 
-                <span class="section-label">
-                    ENCONTRE UMA PALAVRA
-                </span>
+```
+<div class="titulo-secao">
 
-                <h2>Pesquisar na Bíblia</h2>
+    <span>
+        🙏
+    </span>
 
-                <p>
-                    Encontre uma mensagem através de uma palavra,
-                    versículo ou tema.
-                </p>
+    <div>
 
-                <form id="searchForm" class="search-form">
+        <small>
+            MOMENTO DE FÉ
+        </small>
 
-                    <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Digite uma palavra ou versículo..."
-                        autocomplete="off"
-                    >
+        <h2>
+            Oração do Dia
+        </h2>
 
-                    <button type="submit">
-                        🔎 Pesquisar
-                    </button>
+    </div>
 
-                </form>
+</div>
 
-                <div id="searchResult" class="search-result"></div>
 
-            </div>
 
-        </div>
+<div class="oracao-card">
 
-    </section>
 
+    <div class="oracao-icone">
 
-    <!-- ================= CTA ================= -->
+        🙏
 
-    <section class="cta-section">
+    </div>
 
-        <div class="container">
 
-            <div class="cta">
+    <div>
 
-                <span>✝</span>
 
-                <h2>
-                    Que a Palavra de Deus
-                    acompanhe você.
-                </h2>
+        <p id="textoOracao">
+```
 
-                <p>
-                    Volte sempre para encontrar uma nova
-                    mensagem de fé, esperança e amor.
-                </p>
+Senhor meu Deus, obrigado por mais um dia de vida.
 
-                <a href="#versiculo" class="button light">
-                    📖 Ler novamente
-                </a>
+Fortalece minha fé, guia meus passos e enche meu coração de paz.
 
-            </div>
+Ajuda-me a confiar em Ti mesmo diante das dificuldades.
 
-        </div>
+Que a Tua presença esteja comigo hoje e sempre.
 
-    </section>
+Em nome de Jesus, amém.
+
+```
+        </p>
+
+
+        <button
+            class="botao-oracao"
+            id="ouvirOracao"
+            type="button"
+        >
+
+            🔊 Ouvir oração
+
+        </button>
+
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+<!-- ==================================================
+     REFLEXÃO
+================================================== -->
+
+<section
+    class="secao"
+    id="reflexao"
+>
+
+```
+<div class="titulo-secao">
+
+    <span>
+        💡
+    </span>
+
+    <div>
+
+        <small>
+            PARA PENSAR
+        </small>
+
+        <h2>
+            Reflexão do Dia
+        </h2>
+
+    </div>
+
+</div>
+
+
+
+<div class="reflexao-card">
+
+
+    <h3>
+
+        Deus continua cuidando de você.
+
+    </h3>
+
+
+    <p>
+
+        Existem dias em que não conseguimos
+        entender o que está acontecendo.
+        Mesmo assim, podemos continuar
+        confiando em Deus.
+
+    </p>
+
+
+    <p>
+
+        A fé não significa que não teremos
+        dificuldades. Significa que não
+        precisamos enfrentá-las sozinhos.
+
+    </p>
+
+
+    <p>
+
+        Entregue suas preocupações a Deus
+        e continue caminhando. O que hoje
+        parece impossível pode se transformar
+        em um testemunho amanhã.
+
+    </p>
+
+
+</div>
+```
+
+</section>
+
+<!-- ==================================================
+     PESQUISA
+================================================== -->
+
+<section
+    class="pesquisa-secao"
+    id="pesquisa"
+>
+
+```
+<div class="titulo-secao">
+
+    <span>
+        🔎
+    </span>
+
+    <div>
+
+        <small>
+            ENCONTRE UMA PALAVRA
+        </small>
+
+        <h2>
+            Pesquisar na Bíblia
+        </h2>
+
+    </div>
+
+</div>
+
+
+<p>
+
+    Encontre uma mensagem através de uma
+    palavra, versículo ou tema.
+
+</p>
+
+
+<form
+    class="pesquisa"
+    id="formPesquisa"
+>
+
+
+    <input
+        type="text"
+        id="campoPesquisa"
+        placeholder="Digite uma palavra..."
+        autocomplete="off"
+    >
+
+
+    <button
+        type="submit"
+    >
+
+        🔎 Pesquisar
+
+    </button>
+
+
+</form>
+
+
+<div
+    class="resultado-pesquisa"
+    id="resultadoPesquisa"
+></div>
+```
+
+</section>
+
+<!-- ==================================================
+     FRASE FINAL
+================================================== -->
+
+<section class="secao">
+
+```
+<div class="reflexao-card">
+
+
+    <h3>
+
+        🕊️ Continue confiando.
+
+    </h3>
+
+
+    <p>
+
+        Que a Palavra de Deus acompanhe
+        você em todos os momentos.
+
+    </p>
+
+
+    <p>
+
+        Volte sempre para encontrar uma
+        nova mensagem de fé, esperança
+        e amor.
+
+    </p>
+
+
+</div>
+```
+
+</section>
 
 </main>
 
+<!-- ==================================================
+     RODAPÉ
+================================================== -->
 
-<!-- ================= FOOTER ================= -->
+<footer>
 
-<footer class="footer">
+```
+<div class="footer-logo">
 
-    <div class="container footer-content">
+    ✝️ Palavra Viva
 
-        <div class="footer-brand">
-
-            <div class="footer-logo">
-                ✝
-            </div>
-
-            <div>
-                <strong>Palavra Viva</strong>
-                <p>
-                    Uma palavra de fé para cada dia.
-                </p>
-            </div>
-
-        </div>
+</div>
 
 
-        <div class="footer-links">
+<p>
 
-            <a href="#inicio">Início</a>
-            <a href="#versiculo">Versículo</a>
-            <a href="#oracao">Oração</a>
-            <a href="#reflexao">Reflexão</a>
+    Uma palavra de fé para cada dia.
 
-        </div>
-
-    </div>
+</p>
 
 
-    <div class="footer-bottom">
+<div class="footer-links">
 
-        <p>
-            © 2026 Palavra Viva. Todos os direitos reservados.
-        </p>
+    <a href="#inicio">
+        Início
+    </a>
 
-    </div>
+    <a href="#versiculo">
+        Versículo
+    </a>
+
+    <a href="#oracao">
+        Oração
+    </a>
+
+    <a href="#reflexao">
+        Reflexão
+    </a>
+
+    <a href="#pesquisa">
+        Pesquisa
+    </a>
+
+</div>
+
+
+<small>
+
+    © 2026 Palavra Viva — Todos os direitos reservados.
+
+</small>
+```
 
 </footer>
 
+<!-- ==================================================
+     AVISO
+================================================== -->
 
-<!-- ================= TOAST ================= -->
-
-<div id="toast" class="toast">
+<div
+    class="aviso"
+    id="aviso"
+>
     Copiado!
 </div>
 
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
