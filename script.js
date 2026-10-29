@@ -1,5 +1,7 @@
 
-// Elementos da página
+const clubes = {
+  
+  // Elementos da página
 const lista = document.getElementById("listaClubes");
 const busca = document.getElementById("busca");
 const filtroRegiao = document.getElementById("filtroRegiao");
