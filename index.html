@@ -3,350 +3,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Foco no Esporte: notícias, análises, resultados e tudo sobre o mundo esportivo.">
-  <meta name="theme-color" content="#101820">
-  <title>Foco no Esporte | Notícias e resultados</title>
+  <meta name="description" content="Conheça a história dos clubes brasileiros, seus ídolos, títulos e curiosidades.">
+  <meta name="theme-color" content="#08111f">
+
+  <title>Foco no Esporte | História dos Clubes</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <div class="topline">
-    <div class="container topbar">
-      <span>INFORMAÇÃO • PAIXÃO • ESPORTE</span>
-      <span id="today"></span>
-    </div>
+<header class="site-header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="#">
+      <span class="brand-mark">F<span>.</span></span>
+
+      <span class="brand-name">
+        FOCO <b>NO ESPORTE</b>
+        <small>HISTÓRIAS QUE MARCAM</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      ☰
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio">Início</a>
+      <a href="#clubes">Clubes</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
   </div>
+</header>
 
-  <header class="site-header">
-    <div class="container header-inner">
+<main>
 
-      <a class="brand" href="#">
-        <span class="brand-mark">F<span>+</span></span>
-        <span class="brand-name">
-          FOCO <b>NO ESPORTE</b>
-          <small>SUA PAIXÃO, NOSSA NOTÍCIA.</small>
-        </span>
-      </a>
+  <!-- DESTAQUE PRINCIPAL -->
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+  <section class="hero" id="inicio">
 
-      <nav class="main-nav" id="mainNav">
-        <a class="active" href="#inicio">Início</a>
-        <a href="#noticias">Notícias</a>
-        <a href="#futebol" data-category-link="Futebol">Futebol</a>
-        <a href="#outras-modalidades">Outros esportes</a>
-        <a href="#resultados">Resultados</a>
-      </nav>
+    <div class="hero-overlay"></div>
 
-      <a class="header-cta" href="#newsletter">
-        Fique por dentro <span>↗</span>
-      </a>
+    <div class="container hero-content">
 
-    </div>
-  </header>
+      <span class="eyebrow">
+        <i></i> MEMÓRIA • PAIXÃO • FUTEBOL
+      </span>
 
-  <main>
-
-    <section class="hero container" id="inicio">
-
-      <div class="hero-main">
-        <div class="hero-photo"></div>
-        <div class="hero-shade"></div>
-
-        <div class="hero-content">
-          <span class="eyebrow"><i></i> DESTAQUE DO DIA</span>
-          <span class="hero-category">FUTEBOL</span>
-
-          <h1>A emoção do esporte<br>começa <em>aqui.</em></h1>
-
-          <p>
-            As principais histórias, análises e novidades
-            do mundo esportivo em um só lugar.
-          </p>
-
-          <a href="#noticias" class="button button-lime">
-            Explorar notícias <span>→</span>
-          </a>
-        </div>
-
-        <div class="hero-index">
-          <b>01</b><span>/</span> FOCO NO ESPORTE
-        </div>
-      </div>
-
-      <aside class="hero-side">
-
-        <div class="side-heading">
-          <span>EM ALTA</span>
-          <span class="live-dot"></span>
-        </div>
-
-        <article class="trend-card">
-          <div class="trend-image trend-one"></div>
-          <div>
-            <small>FUTEBOL • ANÁLISE</small>
-            <h3>O que observar na próxima rodada do futebol brasileiro</h3>
-            <span class="read-time">LEITURA DE 3 MIN</span>
-          </div>
-        </article>
-
-        <article class="trend-card">
-          <div class="trend-image trend-two"></div>
-          <div>
-            <small>FÓRMULA 1</small>
-            <h3>Velocidade, estratégia e os detalhes que decidem uma corrida</h3>
-            <span class="read-time">LEITURA DE 4 MIN</span>
-          </div>
-        </article>
-
-        <div class="quote-card">
-          <span>“</span>
-          <p>O esporte vai muito além do placar. É história, dedicação e emoção.</p>
-          <b>FOCO NO ESPORTE</b>
-        </div>
-
-      </aside>
-    </section>
-
-    <section class="ticker">
-      <div class="container ticker-inner">
-        <b>GIRO ESPORTIVO</b>
-        <span>•</span>
-        <p>Notícias e informação para quem vive o esporte</p>
-        <span class="ticker-arrow">↗</span>
-      </div>
-    </section>
-
-    <section class="section container" id="noticias">
-
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">FIQUE INFORMADO</span>
-          <h2>Últimas <em>notícias</em></h2>
-        </div>
-
-        <div class="filter-list" id="filters">
-          <button class="filter active" data-filter="Todos">Todas</button>
-          <button class="filter" data-filter="Futebol">Futebol</button>
-          <button class="filter" data-filter="Basquete">Basquete</button>
-          <button class="filter" data-filter="Fórmula 1">Fórmula 1</button>
-          <button class="filter" data-filter="Outros">Outros</button>
-        </div>
-      </div>
-
-      <div class="news-layout">
-
-        <div class="news-grid" id="newsGrid">
-
-          <article class="news-card" data-category="Futebol" data-search="futebol brasileiro preparação temporada clubes">
-            <a href="#detalhes" class="news-image news-football"></a>
-            <div class="news-body">
-              <span class="tag">FUTEBOL</span>
-              <h3><a href="#detalhes">Planejamento e preparação: os bastidores de uma temporada no futebol</a></h3>
-              <p>Entenda como treinamento, estratégia e trabalho em equipe fazem a diferença dentro de campo.</p>
-              <div class="news-meta">
-                <span>REDAÇÃO FOCO</span><span>•</span><span>5 MIN DE LEITURA</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-card" data-category="Basquete" data-search="basquete fundamentos trabalho equipe quadra">
-            <a href="#detalhes" class="news-image news-basket"></a>
-            <div class="news-body">
-              <span class="tag">BASQUETE</span>
-              <h3><a href="#detalhes">Muito além da cesta: os fundamentos que fazem um grande time</a></h3>
-              <p>Uma visão sobre técnica, ritmo e cooperação no basquete.</p>
-              <div class="news-meta">
-                <span>REDAÇÃO FOCO</span><span>•</span><span>3 MIN</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-card" data-category="Fórmula 1" data-search="formula 1 automobilismo corrida velocidade estrategia">
-            <a href="#detalhes" class="news-image news-racing"></a>
-            <div class="news-body">
-              <span class="tag">FÓRMULA 1</span>
-              <h3><a href="#detalhes">A estratégia também acelera: como uma corrida é decidida</a></h3>
-              <p>Pneus, paradas e decisões: conheça elementos importantes do automobilismo.</p>
-              <div class="news-meta">
-                <span>REDAÇÃO FOCO</span><span>•</span><span>4 MIN</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-card" data-category="Outros" data-search="volei esporte coletivo saque bloqueio">
-            <a href="#detalhes" class="news-image news-volley"></a>
-            <div class="news-body">
-              <span class="tag">VÔLEI</span>
-              <h3><a href="#detalhes">Saque, bloqueio e união: a dinâmica do vôlei em quadra</a></h3>
-              <p>Veja como comunicação e posicionamento são decisivos no jogo.</p>
-              <div class="news-meta">
-                <span>REDAÇÃO FOCO</span><span>•</span><span>3 MIN</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-card" data-category="Futebol" data-search="futebol base jovens atletas formação categorias">
-            <a href="#detalhes" class="news-image news-youth"></a>
-            <div class="news-body">
-              <span class="tag">FUTEBOL</span>
-              <h3><a href="#detalhes">A importância das categorias de base para o futuro do futebol</a></h3>
-              <p>Formação, oportunidade e desenvolvimento de novos talentos.</p>
-              <div class="news-meta">
-                <span>REDAÇÃO FOCO</span><span>•</span><span>4 MIN</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-card" data-category="Outros" data-search="corrida atletismo preparação resistência esporte">
-            <a href="#detalhes" class="news-image news-run"></a>
-            <div class="news-body">
-              <span class="tag">ATLETISMO</span>
-              <h3><a href="#detalhes">Disciplina e resistência: o que a corrida ensina aos atletas</a></h3>
-              <p>Conheça alguns pilares da preparação para provas de corrida.</p>
-              <div class="news-meta">
-                <span>REDAÇÃO FOCO</span><span>•</span><span>3 MIN</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-        <aside class="sidebar">
-
-          <div class="search-box">
-            <label for="searchInput">PESQUISE NO PORTAL</label>
-            <div class="search-field">
-              <input id="searchInput" type="search" placeholder="Buscar notícia...">
-              <button id="searchButton" aria-label="Pesquisar">⌕</button>
-            </div>
-            <small>Digite um esporte ou assunto.</small>
-          </div>
-
-          <div class="sidebar-block" id="outras-modalidades">
-            <span class="section-kicker">EXPLORE</span>
-            <h3>Outras modalidades</h3>
-            <a href="#noticias" data-filter-link="Basquete">Basquete <span>↗</span></a>
-            <a href="#noticias" data-filter-link="Fórmula 1">Fórmula 1 <span>↗</span></a>
-            <a href="#noticias" data-filter-link="Outros">Vôlei e atletismo <span>↗</span></a>
-            <a href="#noticias" data-filter-link="Futebol">Futebol <span>↗</span></a>
-          </div>
-
-          <div class="ad-placeholder">
-            <span>ESPAÇO PUBLICITÁRIO</span>
-            <b>Sua marca<br>em destaque.</b>
-            <small>Entre em contato para anunciar.</small>
-          </div>
-
-        </aside>
-      </div>
-
-      <p class="empty-state" id="emptyState" hidden>
-        Nenhuma notícia encontrada. Tente outro termo.
-      </p>
-
-      <p class="demo-note">
-        Conteúdo demonstrativo para apresentação do portal.
-        As matérias e informações desta versão não são notícias em tempo real.
-      </p>
-
-    </section>
-
-    <section class="scores-section" id="resultados">
-      <div class="container">
-
-        <div class="section-heading scores-heading">
-          <div>
-            <span class="section-kicker">ACOMPANHE</span>
-            <h2>Central de <em>resultados</em></h2>
-          </div>
-          <span class="score-label">PAINEL DEMONSTRATIVO</span>
-        </div>
-
-        <div class="score-grid">
-
-          <div class="score-card">
-            <div class="score-top">
-              <span>FUTEBOL • EXEMPLO</span>
-              <span>JOGO ENCERRADO</span>
-            </div>
-            <div class="teams">
-              <div><span class="team-badge">FLA</span><b>Time Azul</b></div>
-              <strong>2 <small>×</small> 1</strong>
-              <div><span class="team-badge team-alt">VSC</span><b>Time Branco</b></div>
-            </div>
-            <div class="score-footer">Placar fictício para demonstração</div>
-          </div>
-
-          <div class="score-card">
-            <div class="score-top">
-              <span>BASQUETE • EXEMPLO</span>
-              <span>JOGO ENCERRADO</span>
-            </div>
-            <div class="teams">
-              <div><span class="team-badge">A</span><b>Equipe A</b></div>
-              <strong>88 <small>×</small> 82</strong>
-              <div><span class="team-badge team-alt">B</span><b>Equipe B</b></div>
-            </div>
-            <div class="score-footer">Placar fictício para demonstração</div>
-          </div>
-
-          <div class="score-card score-info">
-            <span class="section-kicker">EM BREVE</span>
-            <h3>Mais cobertura,<br>mais esporte.</h3>
-            <p>Uma área preparada para receber resultados e tabelas atualizados.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="newsletter-section container" id="newsletter">
-      <div>
-        <span class="section-kicker">NÃO PERCA NADA</span>
-        <h2>O esporte não para.<br><em>Fique por dentro.</em></h2>
-        <p>Volte sempre para acompanhar as novidades do mundo esportivo.</p>
-      </div>
-      <a class="button button-dark" href="#inicio">Voltar ao topo <span>↑</span></a>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-main">
-
-      <a class="brand footer-brand" href="#inicio">
-        <span class="brand-mark">F<span>+</span></span>
-        <span class="brand-name">
-          FOCO <b>NO ESPORTE</b>
-          <small>SUA PAIXÃO, NOSSA NOTÍCIA.</small>
-        </span>
-      </a>
+      <h1>
+        TODA CAMISA
+        <br>
+        <em>CONTA UMA HISTÓRIA.</em>
+      </h1>
 
       <p>
-        Informação, paixão e esporte.<br>
-        O seu ponto de encontro com o mundo esportivo.
+        Reviva as origens, os personagens inesquecíveis e os momentos
+        que construíram os maiores clubes do futebol brasileiro.
       </p>
 
-      <div class="footer-links">
-        <a href="#inicio">Início</a>
-        <a href="#noticias">Notícias</a>
-        <a href="#resultados">Resultados</a>
+      <a class="button button-primary" href="#clubes">
+        EXPLORAR HISTÓRIAS <span>→</span>
+      </a>
+
+    </div>
+
+    <div class="hero-bottom container">
+      <span>FUTEBOL BRASILEIRO</span>
+      <span>TRADIÇÃO QUE ATRAVESSA GERAÇÕES</span>
+    </div>
+
+  </section>
+
+  <!-- INTRODUÇÃO -->
+
+  <section class="intro-section container">
+
+    <div>
+      <span class="section-kicker">ARQUIVO DO FUTEBOL</span>
+
+      <h2>
+        Mais do que resultados.
+        <br>
+        <span>Histórias para lembrar.</span>
+      </h2>
+    </div>
+
+    <p>
+      Um espaço dedicado a contar como os clubes nasceram, cresceram
+      e conquistaram seu lugar na cultura brasileira.
+      Explore perfis históricos e descubra fatos que talvez você
+      ainda não conheça.
+    </p>
+
+  </section>
+
+  <!-- CLUBES -->
+
+  <section class="clubs-section" id="clubes">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-kicker">CONHEÇA AS CAMISAS</span>
+          <h2>História dos clubes</h2>
+        </div>
+
+        <span class="result-count" id="resultCount">
+          10 histórias
+        </span>
+
       </div>
 
+      <div class="filters">
+
+        <button class="filter-btn active" data-filter="todos">
+          Todos
+        </button>
+
+        <button class="filter-btn" data-filter="sudeste">
+          Sudeste
+        </button>
+
+        <button class="filter-btn" data-filter="sul">
+          Sul
+        </button>
+
+        <button class="filter-btn" data-filter="rio">
+          Rio de Janeiro
+        </button>
+
+        <button class="filter-btn" data-filter="paulistas">
+          São Paulo
+        </button>
+
+      </div>
+
+      <label class="search-box">
+        <span>⌕</span>
+
+        <input
+          id="clubSearch"
+          type="search"
+          placeholder="Pesquisar clube, cidade ou palavra-chave..."
+          autocomplete="off"
+        >
+      </label>
+
+      <div class="club-grid" id="clubGrid" aria-live="polite"></div>
+
+      <p class="empty-state" id="emptyState" hidden>
+        Nenhum clube encontrado. Tente outra pesquisa.
+      </p>
+
     </div>
 
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> Foco no Esporte. Todos os direitos reservados.</span>
-      <span>Portal independente • Conteúdo demonstrativo</span>
-    </div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- CURIOSIDADES -->
+
+  <section class="feature-section" id="curiosidades">
+
+    <div class="container feature-grid">
+
+      <div class="feature-copy">
+
+        <span class="section-kicker">VOCÊ SABIA?</span>
+
+        <h2>
+          O futebol também
+          <br>
+          <em>é feito de detalhes.</em>
+        </h2>
+
+        <p>
+          Uma mudança de nome, um estádio construído com a ajuda da
+          torcida ou uma camisa que atravessou décadas.
+          Pequenos fatos ajudam a entender a grandeza de cada instituição.
+        </p>
+
+        <a href="#clubes" class="text-link">
+          DESCOBRIR AS HISTÓRIAS <span>↗</span>
+        </a>
+
+      </div>
+
+      <article class="fact-card">
+
+        <span class="fact-number">01 / CURIOSIDADE</span>
+
+        <div class="fact-icon">✦</div>
+
+        <h3>Clubes que nasceram de outras paixões</h3>
+
+        <p>
+          Vários times brasileiros surgiram ligados a outras modalidades
+          esportivas, associações de bairro ou comunidades de imigrantes.
+          O futebol foi crescendo e se tornou parte central dessas trajetórias.
+        </p>
+
+        <span class="fact-footer">
+          A HISTÓRIA CONTINUA EM CADA GERAÇÃO
+        </span>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+
+  <section class="about-section container" id="sobre">
+
+    <span class="section-kicker">SOBRE O PROJETO</span>
+
+    <h2>O passado merece ser contado.</h2>
+
+    <p>
+      O Foco no Esporte é um projeto independente de conteúdo esportivo,
+      criado para valorizar a memória dos clubes brasileiros.
+      As informações são apresentadas em caráter editorial e podem ser
+      aprofundadas com fontes oficiais, livros e arquivos históricos.
+    </p>
+
+    <div class="about-line">
+      <span>FOCO NO ESPORTE</span>
+      <span>PAIXÃO PELO JOGO, RESPEITO PELA HISTÓRIA.</span>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- RODAPÉ -->
+
+<footer class="site-footer">
+
+  <div class="container footer-inner">
+
+    <a class="brand footer-brand" href="#">
+
+      <span class="brand-mark">F<span>.</span></span>
+
+      <span class="brand-name">
+        FOCO <b>NO ESPORTE</b>
+        <small>HISTÓRIAS QUE MARCAM</small>
+      </span>
+
+    </a>
+
+    <p>
+      © <span id="year"></span> Foco no Esporte.
+      Conteúdo para quem vive futebol.
+    </p>
+
+    <a href="#inicio" class="back-top">
+      VOLTAR AO TOPO ↑
+    </a>
+
+  </div>
+
+</footer>
+
+<!-- JANELA DAS HISTÓRIAS -->
+
+<dialog class="story-dialog" id="storyDialog">
+
+  <button class="dialog-close" id="dialogClose" aria-label="Fechar">
+    ×
+  </button>
+
+  <div class="dialog-banner" id="dialogBanner"></div>
+
+  <div class="dialog-content">
+
+    <span class="section-kicker" id="dialogMeta"></span>
+
+    <h2 id="dialogTitle"></h2>
+
+    <div class="story-body" id="dialogBody"></div>
+
+    <p class="source-note">
+      Nota editorial: datas e marcos históricos podem ter diferentes
+      recortes em fontes especializadas. Consulte os canais oficiais
+      dos clubes e obras históricas para pesquisa aprofundada.
+    </p>
+
+  </div>
+
+</dialog>
+
 </body>
 </html>
