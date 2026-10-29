@@ -1,636 +1,127 @@
+
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de desenvolvimento web.">
+    <title>Meu Portfólio | Desenvolvedor Web</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<meta
-    name="description"
-    content="Palavra Viva — Bíblia, fé, oração, reflexão e mensagens para o seu dia."
->
-
-<meta
-    name="theme-color"
-    content="#a87916"
->
-
-<title>Palavra Viva | Bíblia & Fé</title>
-
-<link
-    rel="stylesheet"
-    href="estilo.css"
->
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ==================================================
-     TOPO
-================================================== -->
+<header>
+    <a href="#" class="logo">PORT<span>FÓLIO.</span></a>
 
-<header class="topo">
-
-
-<a
-    href="#inicio"
-    class="logo"
->
-
-    <div class="logo-icone">
-        ✝️
-    </div>
-
-    <div>
-
-        <strong>
-            Palavra Viva
-        </strong>
-
-        <span>
-            Bíblia & Fé
-        </span>
-
-    </div>
-
-</a>
-
-
-<nav>
-
-    <a href="#inicio">
-        Início
-    </a>
-
-    <a href="#versiculo">
-        Versículo
-    </a>
-
-    <a href="#oracao">
-        Oração
-    </a>
-
-    <a href="#reflexao">
-        Reflexão
-    </a>
-
-    <a href="#pesquisa">
-        Pesquisar
-    </a>
-
-</nav>
-
-
-<button
-    class="tema"
-    id="botaoTema"
-    aria-label="Alterar tema"
->
-    🌙
-</button>
-
-
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
 </header>
 
-<!-- ==================================================
-     CONTEÚDO PRINCIPAL
-================================================== -->
-
-<main>
-
-<!-- ==================================================
-     HERO
-================================================== -->
-
-<section
-    class="hero"
-    id="inicio"
->
-
-
-<div class="hero-conteudo">
-
-
-    <span class="etiqueta">
-
-        ✨ UMA PALAVRA PARA SEU DIA
-
-    </span>
-
-
-    <h1>
-
-        Fortaleça sua fé
-        <br>
-
-        todos os dias.
-
-    </h1>
-
-
-    <p>
-
-        Encontre inspiração, esperança e uma
-        mensagem de fé para começar ou terminar
-        o seu dia.
-
-    </p>
-
-
-    <div class="hero-botoes">
-
-
-        <a
-            href="#versiculo"
-            class="botao-principal"
-        >
-
-            📖 Ler versículo
-
-        </a>
-
-
-        <a
-            href="#oracao"
-            class="botao-secundario"
-        >
-
-            🙏 Fazer oração
-
-        </a>
-
-
-    </div>
-
-
-</div>
-
-
-<div class="cruz-decoracao">
-
-    ✝
-
-</div>
-
-
-</section>
-
-<!-- ==================================================
-     VERSÍCULO
-================================================== -->
-
-<section
-    class="secao"
-    id="versiculo"
->
-
-
-<div class="titulo-secao">
-
-    <span>
-        ✝
-    </span>
-
-    <div>
-
-        <small>
-            PALAVRA DE HOJE
-        </small>
-
-        <h2>
-            Versículo do Dia
-        </h2>
-
-    </div>
-
-</div>
-
-
-<div class="versiculo-card">
-
-
-    <div class="aspas">
-        “
-    </div>
-
-
-    <p id="textoVersiculo">
-
-        O Senhor é o meu pastor;
-        nada me faltará.
-
-    </p>
-
-
-    <strong id="referenciaVersiculo">
-
-        Salmos 23:1
-
-    </strong>
-
-
-    <div class="acoes">
-
-
-        <button
-            id="ouvirVersiculo"
-            type="button"
-        >
-
-            🔊 Ouvir
-
-        </button>
-
-
-        <button
-            id="favoritar"
-            type="button"
-        >
-
-            ♡ Favoritar
-
-        </button>
-
-
-        <button
-            id="copiar"
-            type="button"
-        >
-
-            📋 Copiar
-
-        </button>
-
-
-        <button
-            id="compartilhar"
-            type="button"
-        >
-
-            📤 Compartilhar
-
-        </button>
-
-
-    </div>
-
-
-</div>
-
-
-</section>
-
-<!-- ==================================================
-     ORAÇÃO
-================================================== -->
-
-<section
-    class="secao"
-    id="oracao"
->
-
-
-<div class="titulo-secao">
-
-    <span>
-        🙏
-    </span>
-
-    <div>
-
-        <small>
-            MOMENTO DE FÉ
-        </small>
-
-        <h2>
-            Oração do Dia
-        </h2>
-
-    </div>
-
-</div>
-
-
-
-<div class="oracao-card">
-
-
-    <div class="oracao-icone">
-
-        🙏
-
-    </div>
-
-
-    <div>
-
-
-        <p id="textoOracao">
-
-
-Senhor meu Deus, obrigado por mais um dia de vida.
-
-Fortalece minha fé, guia meus passos e enche meu coração de paz.
-
-Ajuda-me a confiar em Ti mesmo diante das dificuldades.
-
-Que a Tua presença esteja comigo hoje e sempre.
-
-Em nome de Jesus, amém.
-
-
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <span class="tag">DESENVOLVIMENTO WEB</span>
+
+        <h1>
+            Transformando ideias em
+            <span>experiências digitais.</span>
+        </h1>
+
+        <p>
+            Olá! Sou desenvolvedor web e gosto de criar
+            experiências digitais modernas, criativas e funcionais.
         </p>
 
-
-        <button
-            class="botao-oracao"
-            id="ouvirOracao"
-            type="button"
-        >
-
-            🔊 Ouvir oração
-
-        </button>
-
-
+        <div class="buttons">
+            <a href="#projetos" class="btn">Ver projetos ↗</a>
+            <a href="#contato" class="btn-outline">Entrar em contato</a>
+        </div>
     </div>
 
-
-</div>
-
-
-</section>
-
-<!-- ==================================================
-     REFLEXÃO
-================================================== -->
-
-<section
-    class="secao"
-    id="reflexao"
->
-
-
-<div class="titulo-secao">
-
-    <span>
-        💡
-    </span>
-
-    <div>
-
-        <small>
-            PARA PENSAR
-        </small>
-
-        <h2>
-            Reflexão do Dia
-        </h2>
-
+    <div class="hero-card">
+        <div class="code-icon">&lt;/&gt;</div>
+        <h2>CRIATIVIDADE</h2>
+        <p>Design + Tecnologia + Inovação</p>
+        <div class="line"></div>
+        <span>Construindo o futuro digital.</span>
     </div>
-
-</div>
-
-
-
-<div class="reflexao-card">
-
-
-    <h3>
-
-        Deus continua cuidando de você.
-
-    </h3>
-
-
-    <p>
-
-        Existem dias em que não conseguimos
-        entender o que está acontecendo.
-        Mesmo assim, podemos continuar
-        confiando em Deus.
-
-    </p>
-
-
-    <p>
-
-        A fé não significa que não teremos
-        dificuldades. Significa que não
-        precisamos enfrentá-las sozinhos.
-
-    </p>
-
-
-    <p>
-
-        Entregue suas preocupações a Deus
-        e continue caminhando. O que hoje
-        parece impossível pode se transformar
-        em um testemunho amanhã.
-
-    </p>
-
-
-</div>
-
-
 </section>
 
-<!-- ==================================================
-     PESQUISA
-================================================== -->
+<section class="about" id="sobre">
+    <span class="tag">QUEM SOU</span>
+    <h2>Sobre <span>mim</span></h2>
+    <p>
+        Sou apaixonado por tecnologia e desenvolvimento.
+        Meu objetivo é transformar ideias em sites modernos,
+        funcionais e que proporcionem boas experiências.
+    </p>
+</section>
 
-<section
-    class="pesquisa-secao"
-    id="pesquisa"
->
+<section class="skills" id="habilidades">
+    <span class="tag">TECNOLOGIAS</span>
+    <h2>Minhas <span>habilidades</span></h2>
 
-
-<div class="titulo-secao">
-
-    <span>
-        🔎
-    </span>
-
-    <div>
-
-        <small>
-            ENCONTRE UMA PALAVRA
-        </small>
-
-        <h2>
-            Pesquisar na Bíblia
-        </h2>
-
+    <div class="skill-grid">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">WordPress</div>
+        <div class="skill">Design Web</div>
     </div>
-
-</div>
-
-
-<p>
-
-    Encontre uma mensagem através de uma
-    palavra, versículo ou tema.
-
-</p>
-
-
-<form
-    class="pesquisa"
-    id="formPesquisa"
->
-
-
-    <input
-        type="text"
-        id="campoPesquisa"
-        placeholder="Digite uma palavra..."
-        autocomplete="off"
-    >
-
-
-    <button
-        type="submit"
-    >
-
-        🔎 Pesquisar
-
-    </button>
-
-
-</form>
-
-
-<div
-    class="resultado-pesquisa"
-    id="resultadoPesquisa"
-></div>
-
-
 </section>
 
-<!-- ==================================================
-     FRASE FINAL
-================================================== -->
+<section class="projects" id="projetos">
+    <span class="tag">MEU TRABALHO</span>
+    <h2>Projetos em <span>destaque</span></h2>
 
-<section class="secao">
+    <div class="project-grid">
+        <article class="project-card">
+            <div class="project-image project-one">
+                <span>01</span>
+            </div>
+            <div class="project-info">
+                <h3>Futebol Carioca</h3>
+                <p>História e tradição dos clubes do Rio de Janeiro.</p>
+                <a href="https://lucascasa4-jpg.github.io/portifolio/" target="_blank">Ver projeto ↗</a>
+            </div>
+        </article>
 
-
-<div class="reflexao-card">
-
-
-    <h3>
-
-        🕊️ Continue confiando.
-
-    </h3>
-
-
-    <p>
-
-        Que a Palavra de Deus acompanhe
-        você em todos os momentos.
-
-    </p>
-
-
-    <p>
-
-        Volte sempre para encontrar uma
-        nova mensagem de fé, esperança
-        e amor.
-
-    </p>
-
-
-</div>
-
-
+        <article class="project-card">
+            <div class="project-image project-two">
+                <span>02</span>
+            </div>
+            <div class="project-info">
+                <h3>Projeto Web</h3>
+                <p>Uma experiência digital moderna e interativa.</p>
+                <a href="#contato">Em breve ↗</a>
+            </div>
+        </article>
+    </div>
 </section>
 
-</main>
+<section class="contact" id="contato">
+    <span class="tag">VAMOS CONVERSAR?</span>
+    <h2>Vamos criar algo <span>incrível?</span></h2>
+    <p>Tem uma ideia ou projeto? Entre em contato!</p>
 
-<!-- ==================================================
-     RODAPÉ
-================================================== -->
+    <a href="https://wa.me/SEUNUMERO" class="btn">
+        Falar pelo WhatsApp ↗
+    </a>
+</section>
 
 <footer>
-
-
-<div class="footer-logo">
-
-    ✝️ Palavra Viva
-
-</div>
-
-
-<p>
-
-    Uma palavra de fé para cada dia.
-
-</p>
-
-
-<div class="footer-links">
-
-    <a href="#inicio">
-        Início
-    </a>
-
-    <a href="#versiculo">
-        Versículo
-    </a>
-
-    <a href="#oracao">
-        Oração
-    </a>
-
-    <a href="#reflexao">
-        Reflexão
-    </a>
-
-    <a href="#pesquisa">
-        Pesquisa
-    </a>
-
-</div>
-
-
-<small>
-
-    © 2026 Palavra Viva — Todos os direitos reservados.
-
-</small>
-
-
+    <p>© 2026 - Meu Portfólio. Desenvolvido com criatividade.</p>
 </footer>
 
-<!-- ==================================================
-     AVISO
-================================================== -->
-
-<div
-    class="aviso"
-    id="aviso"
->
-    Copiado!
-</div>
-
-<!-- ==================================================
-     JAVASCRIPT
-================================================== -->
-
 <script src="script.js"></script>
-
 </body>
-
 </html>
