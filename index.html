@@ -1,72 +1,158 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça a história dos clubes de futebol do Brasil. Fundação, estádios, títulos e curiosidades.">
+
+  <meta
+    name="description"
+    content="Foco no Esporte: conheça a história dos clubes brasileiros, suas fundações, estádios, conquistas e curiosidades."
+  >
+
   <meta name="theme-color" content="#08111f">
+
   <title>Foco no Esporte | História dos Clubes Brasileiros</title>
+
   <link rel="stylesheet" href="style.css">
+
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
+  <!-- CABEÇALHO -->
   <header class="topo">
-    <a class="marca" href="#">
-      <span class="marca-icone">⚽</span>
-      <span>FOCO <strong>NO ESPORTE</strong></span>
+
+    <a class="marca" href="#inicio" aria-label="Foco no Esporte - Início">
+      <span class="marca-icone" aria-hidden="true"></span>
+
+      <span>
+        FOCO <strong>NO ESPORTE</strong>
+      </span>
     </a>
 
-    <nav>
+    <nav aria-label="Navegação principal">
       <a href="#inicio">Início</a>
       <a href="#clubes">Clubes</a>
       <a href="#explorar">Explorar</a>
       <a href="#sobre">Sobre</a>
     </nav>
+
   </header>
 
   <main>
+
+    <!-- DESTAQUE PRINCIPAL -->
     <section class="hero" id="inicio">
+
       <div class="hero-conteudo">
-        <span class="etiqueta">ENCICLOPÉDIA DO FUTEBOL BRASILEIRO</span>
-        <h1>Toda camisa<br>tem uma <span>história.</span></h1>
+
+        <span class="etiqueta">
+          ENCICLOPÉDIA DO FUTEBOL BRASILEIRO
+        </span>
+
+        <h1>
+          Toda camisa<br>
+          tem uma <span>história.</span>
+        </h1>
+
         <p>
           Explore a trajetória dos clubes brasileiros.
-          Dos grandes campeões às equipes tradicionais que marcaram época.
+          Dos grandes campeões às equipes tradicionais
+          que marcaram época.
         </p>
-        <a href="#clubes" class="botao-principal">EXPLORAR CLUBES <span>→</span></a>
+
+        <a href="#clubes" class="botao-principal">
+          EXPLORAR CLUBES <span>→</span>
+        </a>
+
       </div>
 
       <div class="hero-destaque">
+
         <span>O FUTEBOL É HISTÓRIA</span>
+
         <strong>1895 — HOJE</strong>
-        <p>Uma paixão que atravessa gerações.</p>
+
+        <p>
+          Uma paixão que atravessa gerações.
+        </p>
+
       </div>
+
     </section>
 
-    <section class="numeros">
-      <div><strong id="totalClubes">0</strong><span>Clubes cadastrados</span></div>
-      <div><strong>5</strong><span>Regiões do Brasil</span></div>
-      <div><strong>27</strong><span>Estados e DF</span></div>
-      <div><strong>1</strong><span>Paixão nacional</span></div>
+    <!-- ESTATÍSTICAS -->
+    <section class="numeros" aria-label="Dados do portal">
+
+      <div>
+        <strong id="totalClubes">0</strong>
+        <span>Clubes cadastrados</span>
+      </div>
+
+      <div>
+        <strong>5</strong>
+        <span>Regiões do Brasil</span>
+      </div>
+
+      <div>
+        <strong>27</strong>
+        <span>Estados e DF</span>
+      </div>
+
+      <div>
+        <strong>1</strong>
+        <span>Paixão nacional</span>
+      </div>
+
     </section>
 
+    <!-- CATÁLOGO DE CLUBES -->
     <section class="secao clubes-secao" id="clubes">
+
       <div class="cabecalho-secao">
+
         <div>
-          <span class="etiqueta">NOSSO ACERVO</span>
-          <h2>Explore os <span>clubes</span></h2>
-          <p>Encontre equipes de todos os cantos do futebol brasileiro.</p>
+
+          <span class="etiqueta">
+            NOSSO ACERVO
+          </span>
+
+          <h2>
+            Explore os <span>clubes</span>
+          </h2>
+
+          <p>
+            Encontre equipes de todos os cantos
+            do futebol brasileiro.
+          </p>
+
         </div>
+
       </div>
 
+      <!-- PESQUISA -->
       <div class="pesquisa">
-        <span>⌕</span>
-        <input id="busca" type="search" placeholder="Pesquise clube, cidade ou estado..." aria-label="Pesquisar clubes">
+
+        <span aria-hidden="true">⌕</span>
+
+        <input
+          id="busca"
+          type="search"
+          placeholder="Pesquise clube, cidade ou estado..."
+          aria-label="Pesquisar clubes por nome, cidade ou estado"
+        >
+
       </div>
 
+      <!-- FILTROS -->
       <div class="filtros" id="explorar">
-        <select id="filtroRegiao" aria-label="Filtrar por região">
+
+        <select
+          id="filtroRegiao"
+          aria-label="Filtrar por região"
+        >
           <option value="">Todas as regiões</option>
           <option value="Norte">Norte</option>
           <option value="Nordeste">Nordeste</option>
@@ -75,11 +161,17 @@
           <option value="Sul">Sul</option>
         </select>
 
-        <select id="filtroEstado" aria-label="Filtrar por estado">
+        <select
+          id="filtroEstado"
+          aria-label="Filtrar por estado"
+        >
           <option value="">Todos os estados</option>
         </select>
 
-        <select id="filtroCategoria" aria-label="Filtrar por categoria">
+        <select
+          id="filtroCategoria"
+          aria-label="Filtrar por categoria"
+        >
           <option value="">Todas as categorias</option>
           <option value="Grande">Grandes clubes</option>
           <option value="Tradicional">Tradicionais</option>
@@ -87,66 +179,192 @@
           <option value="Histórico">Históricos</option>
         </select>
 
-        <button id="limparFiltros" class="limpar">Limpar filtros ×</button>
+        <button
+          id="limparFiltros"
+          class="limpar"
+          type="button"
+        >
+          Limpar filtros ×
+        </button>
+
       </div>
 
+      <!-- CONTAGEM DE RESULTADOS -->
       <div class="resultado-topo">
-        <span id="quantidadeResultados">Carregando clubes...</span>
+
+        <span id="quantidadeResultados">
+          Carregando clubes...
+        </span>
+
         <span>BRASIL • FUTEBOL</span>
+
       </div>
 
-      <div class="grade-clubes" id="listaClubes"></div>
+      <!-- O JAVASCRIPT INSERE OS CARTÕES AQUI -->
+      <div
+        class="grade-clubes"
+        id="listaClubes"
+        aria-live="polite"
+      ></div>
 
-      <div class="sem-resultados" id="semResultados" hidden>
-        <span>⚽</span>
+      <!-- MENSAGEM SEM RESULTADOS -->
+      <div
+        class="sem-resultados"
+        id="semResultados"
+        hidden
+      >
+
+        <span aria-hidden="true">⚽</span>
+
         <h3>Nenhum clube encontrado</h3>
-        <p>Tente pesquisar outro nome ou alterar os filtros.</p>
+
+        <p>
+          Tente pesquisar outro nome ou alterar os filtros.
+        </p>
+
       </div>
+
     </section>
 
+    <!-- CHAMADA -->
     <section class="chamada">
+
       <div>
-        <span class="etiqueta">MEMÓRIA DO FUTEBOL</span>
-        <h2>Grandes histórias também vivem nos pequenos clubes.</h2>
-        <p>O futebol brasileiro é feito de tradição, rivalidade e paixão em cada cidade.</p>
+
+        <span class="etiqueta">
+          MEMÓRIA DO FUTEBOL
+        </span>
+
+        <h2>
+          Grandes histórias também vivem nos pequenos clubes.
+        </h2>
+
+        <p>
+          O futebol brasileiro é feito de tradição,
+          rivalidade e paixão em cada cidade.
+        </p>
+
       </div>
-      <a href="#clubes" class="botao-principal">CONHECER HISTÓRIAS →</a>
+
+      <a href="#clubes" class="botao-principal">
+        CONHECER HISTÓRIAS →
+      </a>
+
     </section>
 
+    <!-- SOBRE O PROJETO -->
     <section class="sobre secao" id="sobre">
-      <span class="etiqueta">SOBRE O PROJETO</span>
-      <h2>O futebol brasileiro merece ser lembrado.</h2>
+
+      <span class="etiqueta">
+        SOBRE O PROJETO
+      </span>
+
+      <h2>
+        O futebol brasileiro merece ser lembrado.
+      </h2>
+
       <p>
-        O Foco no Esporte é um projeto dedicado à memória dos clubes brasileiros.
-        Nosso objetivo é reunir informações históricas sobre equipes de todas as
-        regiões, valorizando tanto os grandes campeões quanto os clubes que
+        O Foco no Esporte é um projeto independente
+        dedicado à memória dos clubes brasileiros.
+
+        Nosso objetivo é reunir informações históricas
+        sobre equipes de todas as regiões, valorizando
+        tanto os grandes campeões quanto os clubes que
         representam a paixão pelo futebol em suas comunidades.
       </p>
+
     </section>
+
   </main>
 
+  <!-- RODAPÉ -->
   <footer>
-    <a class="marca" href="#"><span class="marca-icone">⚽</span> FOCO <strong>NO ESPORTE</strong></a>
-    <p>História, tradição e paixão pelo futebol brasileiro.</p>
-    <small>© <span id="anoAtual"></span> Foco no Esporte. Projeto independente.</small>
+
+    <a
+      class="marca"
+      href="#inicio"
+      aria-label="Foco no Esporte - Voltar ao início"
+    >
+      <span class="marca-icone" aria-hidden="true"></span>
+
+      <span>
+        FOCO <strong>NO ESPORTE</strong>
+      </span>
+    </a>
+
+    <p>
+      História, tradição e paixão pelo futebol brasileiro.
+    </p>
+
+    <small>
+      © <span id="anoAtual"></span>
+      Foco no Esporte. Projeto independente.
+    </small>
+
   </footer>
 
-  <div class="modal" id="modalClube" aria-hidden="true">
-    <div class="modal-fundo" data-fechar></div>
-    <article class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modalNome">
-      <button class="fechar-modal" data-fechar aria-label="Fechar">×</button>
+  <!-- MODAL COM A HISTÓRIA DOS CLUBES -->
+  <div
+    class="modal"
+    id="modalClube"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-fundo"
+      data-fechar
+    ></div>
+
+    <article
+      class="modal-conteudo"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalNome"
+    >
+
+      <button
+        class="fechar-modal"
+        type="button"
+        data-fechar
+        aria-label="Fechar ficha do clube"
+      >
+        ×
+      </button>
+
       <div class="modal-faixa">
+
         <span id="modalSigla"></span>
+
         <span id="modalCategoria"></span>
+
       </div>
+
       <div class="modal-texto">
-        <span class="etiqueta" id="modalLocal"></span>
+
+        <span
+          class="etiqueta"
+          id="modalLocal"
+        ></span>
+
         <h2 id="modalNome"></h2>
-        <p class="modal-fundacao" id="modalFundacao"></p>
+
+        <p
+          class="modal-fundacao"
+          id="modalFundacao"
+        ></p>
 
         <div class="detalhes">
-          <div><small>ESTÁDIO</small><strong id="modalEstadio"></strong></div>
-          <div><small>CIDADE</small><strong id="modalCidade"></strong></div>
+
+          <div>
+            <small>ESTÁDIO</small>
+            <strong id="modalEstadio"></strong>
+          </div>
+
+          <div>
+            <small>CIDADE</small>
+            <strong id="modalCidade"></strong>
+          </div>
+
         </div>
 
         <h3>História do clube</h3>
@@ -157,8 +375,11 @@
 
         <h3>Curiosidade</h3>
         <p id="modalCuriosidade"></p>
+
       </div>
+
     </article>
+
   </div>
 
 </body>
