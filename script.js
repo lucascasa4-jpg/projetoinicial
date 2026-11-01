@@ -386,8 +386,7 @@ const clubes = [
         historia: "Equipe do interior paulista com participações em competições nacionais e títulos estaduais importantes.",
         titulos: "Campeonatos Paulistas",
         curiosidade: "É conhecido como Galo de Itu."
-    }
-
+    },
    {
     nome: "America-RJ",
     sigla: "AME",
