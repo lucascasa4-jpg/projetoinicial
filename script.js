@@ -38,6 +38,62 @@ if (
 const clubes = [
    
     {
+        nome: "Mirassol",
+        sigla: "MIR",
+        cidade: "Mirassol",
+        estado: "SP",
+        regiao: "Sudeste",
+        fundacao: 1925,
+        tipo: "Grande",
+        cor: "#D9B323",
+        estadio: "Estádio José Maria de Campos Maia",
+        historia: "O Mirassol Futebol Clube é um clube paulista que ganhou destaque nacional com suas campanhas no futebol brasileiro.",
+        titulos: "Títulos estaduais e conquistas em competições nacionais",
+        curiosidade: "É conhecido como Leão e manda seus jogos no Maião."
+    },
+    {
+        nome: "Red Bull Bragantino",
+        sigla: "RBB",
+        cidade: "Bragança Paulista",
+        estado: "SP",
+        regiao: "Sudeste",
+        fundacao: 1928,
+        tipo: "Tradicional",
+        cor: "#D71920",
+        estadio: "Estádio Nabi Abi Chedid",
+        historia: "O clube surgiu como Clube Atlético Bragantino e passou a atuar em parceria com a Red Bull em 2019.",
+        titulos: "Campeonato Brasileiro Série B e Campeonato Paulista",
+        curiosidade: "É conhecido como Massa Bruta."
+    },
+    {
+        nome: "São Paulo",
+        sigla: "SPFC",
+        cidade: "São Paulo",
+        estado: "SP",
+        regiao: "Sudeste",
+        fundacao: 1930,
+        tipo: "Grande",
+        cor: "#D71920",
+        estadio: "MorumBIS",
+        historia: "O São Paulo Futebol Clube é um dos clubes mais vitoriosos do futebol brasileiro, com conquistas nacionais e internacionais.",
+        titulos: "Campeonato Brasileiro, Copa do Brasil, Copa Libertadores e Mundial de Clubes",
+        curiosidade: "É conhecido como Tricolor Paulista."
+    },
+    {
+        nome: "Bahia",
+        sigla: "BAH",
+        cidade: "Salvador",
+        estado: "BA",
+        regiao: "Nordeste",
+        fundacao: 1931,
+        tipo: "Grande",
+        cor: "#1769AA",
+        estadio: "Arena Fonte Nova",
+        historia: "O Esporte Clube Bahia é um dos clubes mais tradicionais do Nordeste e possui uma história marcante no futebol brasileiro.",
+        titulos: "Campeonato Brasileiro e diversos Campeonatos Baianos",
+        curiosidade: "É conhecido como Esquadrão de Aço."
+    },
+   {
         nome: "Atlético Mineiro",
         sigla: "CAM",
         cidade: "Belo Horizonte",
