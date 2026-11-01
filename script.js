@@ -38,6 +38,48 @@ if (
 const clubes = [
    
     {
+        nome: "SE Belford Roxo",
+        sigla: "SEBR",
+        cidade: "Belford Roxo",
+        estado: "RJ",
+        regiao: "Sudeste",
+        fundacao: 2020,
+        tipo: "Regional",
+        cor: "#168447",
+        estadio: "Estádio Nélio Gomes",
+        historia: "A Sociedade Esportiva Belford Roxo representa o município de Belford Roxo, na Baixada Fluminense, e participa do futebol estadual do Rio de Janeiro.",
+        titulos: "Conquistas em competições estaduais",
+        curiosidade: "É um representante do futebol da Baixada Fluminense."
+    },
+    {
+        nome: "Audax Rio",
+        sigla: "AUD",
+        cidade: "Saquarema",
+        estado: "RJ",
+        regiao: "Sudeste",
+        fundacao: 2005,
+        tipo: "Regional",
+        cor: "#D71920",
+        estadio: "Estádio do Trabalhador",
+        historia: "O Audax Rio é um clube do futebol fluminense que já teve ligação com São João de Meriti e passou a atuar em Saquarema.",
+        titulos: "Conquistas em competições estaduais",
+        curiosidade: "O clube já foi conhecido como Sendas e Audax Rio de Janeiro."
+    },
+    {
+        nome: "Barcelona-RJ",
+        sigla: "BAR-RJ",
+        cidade: "Rio de Janeiro",
+        estado: "RJ",
+        regiao: "Sudeste",
+        fundacao: 1999,
+        tipo: "Regional",
+        cor: "#F2C300",
+        estadio: "Estádio de Moça Bonita",
+        historia: "O Barcelona Esporte Clube é uma equipe do futebol carioca que participa de competições do cenário estadual.",
+        titulos: "Conquistas em competições estaduais",
+        curiosidade: "É conhecido como Barcelona Carioca."
+    },   
+    {
         nome: "Athletic Club",
         sigla: "ATH",
         cidade: "São João del-Rei",
