@@ -525,7 +525,7 @@ const clubes = [
     historia: "O Operário Futebol Clube é um nome histórico do futebol sul-mato-grossense.",
     titulos: "Conquistas estaduais e participações nacionais.",
     curiosidade: "Protagoniza o tradicional Comerário com o Comercial-MS."
-  }
+  },
    {
     nome: "Bangu",
     sigla: "BAN",
