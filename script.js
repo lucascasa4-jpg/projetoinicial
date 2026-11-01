@@ -106,8 +106,6 @@ const clubes = [
     titulos: "Conquistas estaduais e regionais.",
     curiosidade: "É um dos nomes tradicionais do futebol de Campos dos Goytacazes."
   },
-
-  // SÃO PAULO — interior e clubes históricos
   {
     nome: "Ponte Preta",
     sigla: "PON",
@@ -192,8 +190,6 @@ const clubes = [
     titulos: "Conquistas estaduais e campanhas históricas nas divisões paulistas.",
     curiosidade: "Sua casa fica no bairro da Mooca."
   },
-
-  // MINAS GERAIS E ESPÍRITO SANTO
   {
     nome: "Villa Nova",
     sigla: "VNO",
@@ -236,8 +232,6 @@ const clubes = [
     titulos: "Conquistas estaduais e participações nacionais.",
     curiosidade: "Sua história está ligada à antiga Companhia Vale do Rio Doce."
   },
-
-  // SUL — Paraná, Santa Catarina e Rio Grande do Sul
   {
     nome: "Joinville",
     sigla: "JEC",
@@ -480,8 +474,6 @@ const clubes = [
     titulos: "Conquistas estaduais e participações regionais.",
     curiosidade: "É conhecido como Índio da Consolata."
   },
-
-  // CENTRO-OESTE
   {
     nome: "Brasiliense",
     sigla: "BRA",
