@@ -38,6 +38,48 @@ if (
 const clubes = [
    
     {
+        nome: "Atlético Mineiro",
+        sigla: "CAM",
+        cidade: "Belo Horizonte",
+        estado: "MG",
+        regiao: "Sudeste",
+        fundacao: 1908,
+        tipo: "Grande",
+        cor: "#111111",
+        estadio: "Arena MRV",
+        historia: "O Clube Atlético Mineiro foi fundado em Belo Horizonte em 1908. É um dos clubes mais tradicionais do futebol brasileiro, com títulos nacionais e internacionais.",
+        titulos: "Campeonato Brasileiro, Copa do Brasil, Copa Libertadores e múltiplos Campeonatos Mineiros",
+        curiosidade: "É conhecido como Galo e manda seus jogos na Arena MRV."
+    },
+    {
+        nome: "Cruzeiro",
+        sigla: "CRU",
+        cidade: "Belo Horizonte",
+        estado: "MG",
+        regiao: "Sudeste",
+        fundacao: 1921,
+        tipo: "Grande",
+        cor: "#1769AA",
+        estadio: "Mineirão",
+        historia: "Fundado originalmente como Palestra Itália, o Cruzeiro adotou seu nome atual em 1942. É um dos clubes mais vitoriosos do futebol brasileiro.",
+        titulos: "Campeonato Brasileiro, Copa do Brasil, Copa Libertadores e múltiplos Campeonatos Mineiros",
+        curiosidade: "É conhecido como Raposa e tem uma das torcidas mais populares de Minas Gerais."
+    },
+    {
+        nome: "América-MG",
+        sigla: "AME",
+        cidade: "Belo Horizonte",
+        estado: "MG",
+        regiao: "Sudeste",
+        fundacao: 1912,
+        tipo: "Grande",
+        cor: "#168447",
+        estadio: "Independência",
+        historia: "O América Futebol Clube foi fundado em Belo Horizonte em 1912 e possui uma longa história no futebol mineiro e brasileiro.",
+        titulos: "Campeonatos Mineiros e títulos nacionais de divisões inferiores",
+        curiosidade: "É conhecido como Coelho e manda seus jogos tradicionalmente no Estádio Independência."
+    },
+   {
         nome: "Uberaba",
         sigla: "USC",
         cidade: "Uberaba",
