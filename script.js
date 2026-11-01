@@ -36,6 +36,20 @@ if (
 // =========================================
 
 const clubes = [
+   {
+    nome: "Bangu",
+    sigla: "BAN",
+    cidade: "Rio de Janeiro",
+    estado: "RJ",
+    regiao: "Sudeste",
+    fundacao: 1904,
+    tipo: "Tradicional",
+    cor: "#c8102e",
+    estadio: "Estádio Moça Bonita",
+    historia: "Clube tradicional da Zona Oeste do Rio de Janeiro, com destaque na história do Campeonato Carioca.",
+    titulos: "Campeonatos Cariocas de 1933 e 1966.",
+    curiosidade: "Foi vice-campeão brasileiro em 1985."
+  },
   {
     nome: "Flamengo",
     sigla: "FLA",
