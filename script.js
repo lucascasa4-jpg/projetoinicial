@@ -290,20 +290,6 @@ const clubes = [
         curiosidade: "É conhecido como Tigre."
     },
     {
-        nome: "Volta Redonda",
-        sigla: "VOL",
-        cidade: "Volta Redonda",
-        estado: "RJ",
-        regiao: "Sudeste",
-        fundacao: 1976,
-        tipo: "Tradicional",
-        cor: "#F2C300",
-        estadio: "Estádio Raulino de Oliveira",
-        historia: "O Volta Redonda Futebol Clube representa o sul fluminense e já conquistou títulos nacionais.",
-        titulos: "Campeonato Brasileiro Série D e Campeonato Carioca",
-        curiosidade: "É conhecido como Voltaço."
-    },
-    {
         nome: "Amazonas",
         sigla: "AMA",
         cidade: "Manaus",
