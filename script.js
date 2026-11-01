@@ -316,8 +316,6 @@ const clubes = [
     titulos: "Conquistas estaduais e campeão brasileiro da Série B de 1992.",
     curiosidade: "Seu uniforme tradicional combina vermelho, azul e branco."
   },
-
-  // NORDESTE — clubes de tradição regional
   {
     nome: "Campinense",
     sigla: "CAM",
@@ -416,8 +414,6 @@ const clubes = [
     titulos: "Conquistas estaduais e campanhas nacionais.",
     curiosidade: "É conhecido como Fantasma das Alagoas."
   },
-
-  // NORTE — representantes regionais
   {
     nome: "Rio Branco-AC",
     sigla: "RBC",
